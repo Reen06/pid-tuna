@@ -150,6 +150,19 @@ body {
   border-color: var(--border-2);
 }
 
+/* Keep the logo and source/connection controls reachable on phone screens. */
+@media (max-width: 600px) {
+  .app-header {
+    height: auto;
+    min-height: 80px;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+  }
+  .app-header__logo { height: 28px; flex-shrink: 0; }
+  .app-header__right { width: 100%; flex-wrap: wrap; gap: 0.4rem; }
+  .app-header__version { white-space: nowrap; }
+}
+
 /* Light/dark switch — sits left of the FC button in the header. */
 .theme-toggle {
   display: inline-flex;
