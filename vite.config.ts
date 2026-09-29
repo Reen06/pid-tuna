@@ -31,6 +31,8 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      // Authenticated AETHR deployments must not retain the app shell after logout.
+      disable: env?.VITE_AETHR === '1',
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
       workbox: {

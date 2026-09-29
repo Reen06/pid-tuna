@@ -155,6 +155,11 @@ export function App() {
           className="app-header__logo"
         />
         <div className="app-header__right">
+          {import.meta.env.VITE_AETHR === '1' && (
+            <a className="app-header__version" href={`${import.meta.env.BASE_URL}source.tar.gz`} download>
+              AETHR · Source (AGPL)
+            </a>
+          )}
           <ThemeToggle />
           <FcMscButton />
           <a
