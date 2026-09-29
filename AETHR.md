@@ -12,7 +12,7 @@ a Source link. Preserve the upstream license and attribution.
 
 Package with Dockerfile.aethr after configuring OWNER_USERNAME in the staged
 nginx configuration. Register as a per-user web app, root proxy mode, isolated
-network, trusted SSO header `X-Aethr-User`, and no mounts. The app server rejects
+network, trusted SSO headers `X-Aethr-User` and `X-Aethr-Role`, and no mounts. The app server rejects
 other identities. Publish no host/LAN HTTP port directly: use AETHR's existing
 authenticated proxy. Do not grant Front Door access.
 
